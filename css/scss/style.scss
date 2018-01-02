@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+// Susy grid system
+@import "sass/susy/grid_settings";
+@import "node_modules/susy/sass/susy";
+
+// Breakpoint media queries 
+@import "node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+// Retina rules
+@import "sass/mixins/retina_rules";
+html {
+	background-color: rgb(253, 0, 2);
+	@include breakpoint($tablet) {
+	font-size: 75%;
+  }
+	@include breakpoint($phone) {
+	font-size: 50%;
+  }
+}
+
+body {
+	height: 100%;
+	min-height: 800px;
+}
+
+p {
+	font-size: 16px;
+	@include breakpoint($tablet) {
+	font-size: 20px;
+  }
+	@include breakpoint($phone) {
+	font-size: 32px;
+  }
+}
+.gradient {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	overflow: auto;
+	top: 0px;
+	left: 0px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fd0002+0,ffffff+0,b60001+100&0+0,1+100 */
+background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(182,0,1,1) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%,rgba(182,0,1,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(182,0,1,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#b60001',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+button {
+	border: none;
+	padding: 0px;
+}
+
+.logo{
+	display: block;
+	width: 800px;
+	height: 200px;
+	background-image: url("../../img/cf-logo.png");
+	@include background-image-retina("../img/cf-logo", "png", 800px, 200px);
+// 	@include breakpoint($tablet) {
+// 	width: 400px;
+// 	height: 100px;
+// 	background-image: url("../../img/cf-logo-md.png");
+// 	@include background-image-retina("../../img/cf-logo-md", "png", 400px, 100px);
+//   }
+//   	@include breakpoint($phone) {
+// 	width: 200px;
+// 	height: 50px;
+// 	background-image: url("../../img/cf-logo-sm.png");
+// 	@include background-image-retina("../../img/cf-logo-sm", "png", 200px, 50px);
+//   }
+	margin: 16.666667% auto 0px;
+}
+
+.nav {
+	width: 280px;
+	height: 240px;
+	position: relative;
+	margin: 60px auto 0px auto;
+}
+
+.about-me {
+	width: 120px;
+	height: 120px;
+	position: relative;
+	background-color: #A9D5E3;
+	box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.28);
+	margin: 0px 5px 0px 15px;
+}
+
+.about-me:hover {
+box-shadow: 0px 0px 15px 2.5px rgba(0, 0, 0, 0.14);
+transition: box-shadow 0.25s;
+transition-timing-function: ease;
+}
+
+.about-me::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;	
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,95cbc6+100&0+0,0.28+50,1+100 */
+background: -moz-linear-gradient(-45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.28) 50%, rgba(149,203,198,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.28) 50%,rgba(149,203,198,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.28) 50%,rgba(149,203,198,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#95cbc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.about-me img {
+	height: 80px;
+	width: 80px;
+	margin-top: 20px;
+}
+
+
+.medium {
+	width: 120px;
+	height: 120px;
+	position: relative;
+	background-color: #E8C8C2;
+	box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.28);
+}
+
+.medium::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;	
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,d3b6b1+100&0+0,0.38+50,1+100 */
+background: -moz-linear-gradient(-45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.48) 50%, rgba(211,182,177,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.48) 50%,rgba(211,182,177,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.48) 50%,rgba(211,182,177,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#d3b6b1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.medium:hover {
+box-shadow: 0px 0px 15px 2.5px rgba(0, 0, 0, 0.14);
+transition: box-shadow 0.25s;
+transition-timing-function: ease;
+}
+
+.medium img {
+	height: 80px;
+	width: 80px;
+	margin-top: 20px;
+}
+
+.contact {
+	width: 120px;
+	height: 120px;
+	border-radius: 120px;
+	position: absolute;
+	left: 50%;
+	margin: 80px 0px 0px -60px;
+	background-color: #f6e44c;
+	box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.28);
+}
+.contact::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;	
+	border-radius: 120px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,e0d046+100&0+0,0.48+50,1+100 */
+background: -moz-linear-gradient(-45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.38) 60%, rgba(224,208,70,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.38) 60%,rgba(224,208,70,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.38) 60%,rgba(224,208,70,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#e0d046',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.contact:hover {
+box-shadow: 0px 0px 20px 2.5px rgba(0, 0, 0, 0.14);
+transition: box-shadow 0.25s;
+transition-timing-function: ease;
+}
+
+.contact img {
+	height: 80px;
+	width: 80px;
+	margin-top: 20px;
+}
+
+section {
+  @include container;
+}
+
+article {
+  @include span(first 3 of 12);
+  @include susy-breakpoint($tablet, $susy) {
+    @include span(first 6 of 12);
+  }
+
+  @include susy-breakpoint($phone, $susy) {
+    @include span(first 12 of 12);
+  }
+
+	padding: 24px;
+}
+
+.coffee-cup {
+	width: 400px;
+	height: 400px;
+	position: fixed;
+	overflow: hidden;
+	left: -120px;
+	bottom: -80px;
+	background-image: url("../../img/coffee-cup.png");
+	@include background-image-retina("../../img/coffee-cup", "png", 400px, 400px);
+  }
+
+  .mouse {
+	width: 360px;
+	height: 360px;
+	position: fixed;
+	overflow: hidden;
+	right: -20px;
+	bottom: -20px;
+	background-image: url("../../img/mouse.png");
+	@include background-image-retina("../../img/mouse", "png", 360px, 360px);
+  }
+
+  .keyboard {
+	width: 800px;
+	height: 160px;
+	position: fixed;
+	overflow: hidden;
+	top: 0px;
+	left: 50%;
+	margin-left: -400px;
+	background-image: url("../../img/keyboard.png");
+	@include background-image-retina("../../img/keyboard", "png", 800px, 160px);
+}
